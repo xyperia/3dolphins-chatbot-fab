@@ -1,0 +1,1717 @@
+/*--------------------
+Global
+--------------------*/
+input:focus {outline:0 !important;}
+label:focus {outline:0 !important;}
+
+/*--------------------
+Body
+--------------------*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+/*--------------------
+Login
+--------------------*/
+@media (min-width: 700px) {
+	.dolphin-login {
+    -webkit-transform: translate(-50%, -55%);
+    transform: translate(-50%, -55%);
+    top: 60%;
+    right: -170px;
+    width: 380px;
+    height: 565px;
+    border-radius: 10px;
+  }
+  .iti__country-list {
+    font-size: 11px;
+    max-width: 500%;
+  }
+}
+@media (max-width: 700px) {
+	.dolphin-login {
+    width: 100%;
+    height: 100%;
+    z-index: 99999999;
+    overflow: hidden;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2);
+    background: rgba(255, 255, 255, 0.98);
+    text-align: center;
+    top: 0%;
+    left: 0%;
+  }
+  .iti__country-list {
+    font-size: 11px;
+    max-width: 658%;
+  }
+}
+@media (min-height: 600px) {
+  .dolphin-name-input {
+    margin-top: 53px !important;
+  }
+}
+@media (max-height: 600px) {
+	.dolphin-login {
+    width: 100% !important;
+    height: 100% !important;
+    z-index: 99999999 !important;
+    overflow: hidden !important;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2) !important;
+    background: rgba(255, 255, 255, 0.98) !important;
+    text-align: center !important;
+    top: 0% !important;
+    left: 0% !important;
+    right: 0% !important;
+    transform: unset !important;
+    border-radius: 0px !important;
+  }
+  .iti__country-list {
+    font-size: 11px;
+    max-width: 658%;
+  }
+  .dolphin-connect-message {
+    margin-top: 2% !important;
+    margin-bottom: 0% !important;
+  }
+}
+.dolphin-login {
+  position: fixed;
+  margin:0 auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: none;
+  z-index: 99999999;
+  overflow: hidden;
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2);
+  background: #303F9F;
+  text-align: center;
+  font-family: "Helvetica Neue", "Apple Color Emoji", Helvetica, Arial, sans-serif;
+  font-size: 100%;
+  font-style: normal;
+  letter-spacing: normal;
+  font-stretch: normal;
+  font-weight: normal;
+  text-align-last: initial;
+  text-indent: 0px;
+  text-shadow: none;
+  text-transform: none;
+  box-sizing: content-box;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1;
+  font-variant: normal;
+  text-decoration: none;
+}
+.dolphin-login-body {
+  height: 87%;
+  background: white;
+  width: 90%;
+  top: 2%;
+  position: relative;
+  left: 5%;
+  border-radius: 10px;
+  box-shadow: 0 4px 23px 0 rgba(0,0,0,.09);
+  overflow: auto;
+}
+
+/*--------------------
+Login Input
+--------------------*/
+.dolphin-member-mode-tilte-box {
+  background: none !important;
+  border: none !important;
+  border-radius: 5px;
+  width: 70%;
+  margin: 0 auto;
+  outline: none !important;
+  color: rgba(93, 109, 126, 1);
+  text-align: left;
+  font-size: 13px;
+  padding-bottom: 8px;
+}
+.dolphin-member-box {
+  background: none !important;
+  border: none !important;
+  border-radius: 5px;
+  width: 70%;
+  margin: 0 auto;
+  outline: none !important;
+  color: rgba(93, 109, 126, 1);
+  text-align: left;
+  font-size: 13px;
+  padding-bottom: 8px;
+}
+.dolphin-non-member-box {
+  background: none !important;
+  border: none !important;
+  border-radius: 5px;
+  width: 70%;
+  margin: 0 auto;
+  outline: none !important;
+  color: rgba(93, 109, 126, 1);
+  text-align: left;
+  font-size: 13px;
+  padding-bottom: 8px;
+}
+.dolphin-member-mode-check input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  margin-top: 0px;
+  margin-left: 0px;
+}
+.dolphin-member-mode-check {
+  margin-right: 16px;
+}
+.dolphin-select-option-member-mode {
+  border: 3px solid #303F9F !important;
+}
+.dolphin-member-mode-check:hover .dolphin-select-member-mode::after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 50%;
+  box-shadow: 0.1px 0.1px 3px 0px #303F9F;
+}
+.dolphin-select-member-mode {
+  position: absolute;
+  height: 12px;
+  width: 12px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+.dolphin-member-id-input {
+  border: none !important;
+  background: #F0F3F4 !important;
+  border-radius: 5px;
+  width: 70%;
+  margin: 0 auto;
+  height: 35px;
+  outline: none !important;
+  color: black;
+  margin-top: 5px;
+  padding: 10px;
+  font-size: 13px;
+}
+.dolphin-member-id-input:focus {
+  border-bottom: solid 1px #58D68D;
+}
+.dolphin-member-id-input input:focus:-webkit-placeholder {
+  color: transparent;
+}
+.dolphin-name-input {
+  border: none !important;
+  background: #F0F3F4 !important;
+  border-radius: 5px;
+  width: 70%;
+  margin: 0 auto;
+  height: 35px;
+  outline: none !important;
+  color: black;
+  margin-top: 5px;
+  padding: 10px;
+  font-size: 13px;
+}
+.dolphin-name-input:focus {
+  border-bottom: solid 1px #58D68D;
+}
+.dolphin-name-input input:focus:-webkit-placeholder {
+  color: transparent;
+}
+::-webkit-input-placeholder { /* Chrome */
+  color: rgba(93, 109, 126, 0.8) !important;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: rgba(93, 109, 126, 0.8) !important;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: rgba(93, 109, 126, 0.8) !important;
+  opacity: 1;
+}
+:-moz-placeholder { /* Firefox 4 - 18 */
+  color: rgba(93, 109, 126, 0.8) !important;
+  opacity: 1;
+}
+.dolphin-email-input {
+  border: none !important;
+  background: #F0F3F4 !important;
+  border-radius: 5px;
+  width: 70%;
+  margin: 0 auto;
+  height: 35px;
+  outline: none !important;
+  color: black;
+  margin-top: 5px;
+  padding: 10px;
+  font-size: 13px;
+}
+.dolphin-email-input:focus {
+  border-bottom: solid 1px #58D68D;
+}
+.dolphin-email-input input:focus:-webkit-placeholder {
+  color: transparent;
+}
+.dolphin-phone-input {
+  border: none !important;
+  background: #F0F3F4 !important;
+  border-radius: 5px;
+  width: 100%;
+  margin: 0 auto;
+  height: 35px;
+  outline: none !important;
+  color: black;
+  margin-top: 5px;
+  padding: 10px;
+  font-size: 13px;
+}
+.dolphin-phone-input:focus {
+  border-bottom: solid 1px #58D68D;
+}
+.dolphin-phone-input input:focus:-webkit-placeholder {
+  color: transparent;
+}
+.dolphin-comment-input {
+  border: none !important;
+  background: #F0F3F4 !important;
+  border-radius: 5px;
+  width: 70%;
+  margin: 0 auto;
+  height: 180px;
+  outline: none !important;
+  color: black;
+  margin-top: 5px;
+  padding: 10px;
+  font-size: 13px;
+  resize: none;
+  font-family: inherit;
+}
+.dolphin-comment-input:focus {
+  border-bottom: solid 1px #58D68D;
+}
+.dolphin-comment-input input:focus:-webkit-placeholder {
+  color: transparent;
+}
+.dolphin-select-topic {
+  border: none !important;
+  background: #F0F3F4 !important;
+  border-radius: 5px;
+  width: 70%;
+  margin: 0 auto;
+  height: 35px;
+  outline: none !important;
+  color: black;
+  margin-top: 5px;
+  padding: 10px;
+  font-size: 13px;
+}
+.dolphin-select-topic:focus {
+  border-bottom: solid 1px #58D68D;
+}
+.dolphin-select-topic input:focus:-webkit-placeholder {
+  color: transparent;
+}
+.dolphin-login-connect {
+  z-index: 1;
+  color: #fff;
+  border: none;
+  height: 35px;
+  width: 70%;
+  background: #303F9F;
+  font-size: 10px;
+  text-transform: uppercase;
+  line-height: 1;
+  padding: 6px 10px;
+  border-radius: 5px;
+  outline: none !important;
+  -webkit-transition: background .2s ease;
+  transition: background .2s ease;
+  cursor: pointer;
+  font-size: 13px;
+  margin-top: 15px;
+  margin-bottom: 4%;
+}
+.dolphin-login-connect:hover {
+  background: #4854A0;
+}
+.dolphin-email-submit {
+  z-index: 1;
+  color: #fff;
+  border: none;
+  height: 35px;
+  width: 70%;
+  background: #303F9F;
+  font-size: 10px;
+  text-transform: uppercase;
+  line-height: 1;
+  padding: 6px 10px;
+  border-radius: 5px;
+  outline: none !important;
+  -webkit-transition: background .2s ease;
+  transition: background .2s ease;
+  cursor: pointer;
+  font-size: 13px;
+  margin-top: 10px;
+}
+.dolphin-email-submit:hover {
+  background: #4854A0;
+}
+.dolphin-login-close {
+	float: right;
+}
+.dolphin-connect-message {
+	color: rgba(93, 109, 126, 1);
+	font-size: 10px;
+	width: 70%;
+	margin-top: 10%;
+	margin-bottom: 5%;
+	display:inline-block;
+}
+.dolphin-warning-member-mode {
+  color: red;
+	width: 70%;
+	font-size: 10px;
+	display:inline-block;
+	text-align: left;
+}
+.dolphin-warning-member-id {
+  color: red;
+  width: 70%;
+  font-size: 10px;
+  display:inline-block;
+  text-align: right;
+}
+.dolphin-warning-name {
+	color: red;
+	width: 70%;
+	font-size: 10px;
+	display:inline-block;
+	text-align: right;
+}
+.dolphin-warning-email {
+	color: red;
+	width: 70%;
+	font-size: 10px;
+	display:inline-block;
+	text-align: right;
+}
+.dolphin-warning-phone {
+	color: red;
+	width: 70%;
+	font-size: 10px;
+	display:inline-block;
+	text-align: right;
+}
+.dolphin-warning-selection-topic {
+  color: red;
+  width: 70%;
+  font-size: 10px;
+  display:inline-block;
+  text-align: right;
+}
+.dolphin-warning-comment {
+	color: red;
+	width: 70%;
+	font-size: 10px;
+	display:inline-block;
+	text-align: right;
+}
+.dolphin-warning-login-box {
+	background-color: white;
+	width: 100%;
+	font-size: 11px;
+	display:inline-block;
+  text-align: center;
+  height: 35px;
+}
+.dolphin-warning-login {
+	color: black;
+	width: 70%;
+	font-size: 11px;
+	font-weight: 300;
+	display:inline-block;
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.dolphin-error-login-box {
+	background-color: white;
+	width: 100%;
+	font-size: 11px;
+  display:inline-block;
+  text-align: center;
+  height: 100%;
+}
+.dolphin-error-login {
+  color: black;
+  width: 70%;
+  font-size: 11px;
+  font-weight: 300;
+  display: inline-block;
+  text-align: center;
+  position: relative;
+  top: 25%;
+}
+.dolphin-captcha {
+    text-align: center;
+}
+.dolphin-g-recaptcha {
+	transform:scale(0.77);
+	-webkit-transform:scale(0.77);
+	transform-origin:0 0;
+	-webkit-transform-origin:0 0;
+	width: 78%;
+  display: inline-block;
+}
+.g-recaptcha div {
+  width: 100% !important;
+}
+/*--------------------
+Loading
+--------------------*/
+.dolphin-loader {
+  background: url('https://cdn.3dolphins.ai/widget/images/ic_loading.gif');
+  width: 100px;
+  height: 80px;
+}
+	
+/*--------------------
+Chat
+--------------------*/
+@media (min-width: 700px) {
+	.dolphin-chat {
+    -webkit-transform: translate(-50%, -55%);
+    transform: translate(-50%, -55%);
+    top: 60%;
+    right: -170px;
+    width: 380px;
+    height: 565px;
+    border-radius: 10px;
+    position: fixed;
+	}
+}
+@media (max-width: 700px) {
+	.dolphin-chat {
+    width: 100%;
+    height: 100%;
+    z-index: 999999;
+    overflow: hidden;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 0%;
+    left: 0%;
+	}
+}
+@media (max-height: 600px) {
+	.dolphin-chat {
+    width: 100% !important;
+    height: 100% !important;
+    z-index: 999999 !important;
+    overflow: hidden !important;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2) !important;
+    position: fixed !important;
+    top: 0% !important;
+    left: 0% !important;
+    right: 0% !important;
+    transform: unset !important;
+    border-radius: 0% !important;
+	}
+}
+.dolphin-chat {
+  margin:0 auto;
+  z-index: 999999;
+  overflow: hidden;
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2);
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: none;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  font-family: "Helvetica Neue", "Apple Color Emoji", Helvetica, Arial, sans-serif;
+  font-size: 100%;
+  font-style: normal;
+  letter-spacing: normal;
+  font-stretch: normal;
+  font-weight: normal;
+  text-align-last: initial;
+  text-indent: 0px;
+  text-shadow: none;
+  text-transform: none;
+  box-sizing: content-box;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1;
+  font-variant: normal;
+  text-decoration: none;
+}
+
+/*--------------------
+Chat Title
+--------------------*/
+@media (min-width: 700px) {
+	.dolphin-chat-title {
+		border-radius: 10px 10px 0 0;
+	}
+}
+@media (max-width: 700px) {
+	.dolphin-chat-title {
+		border-radius: 0 0 0 0;
+	}
+}
+@media (max-height: 600px) {
+	.dolphin-chat-title {
+		border-radius: 0 0 0 0 !important;
+	}
+}
+.dolphin-chat-title {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 1 55px;
+      -ms-flex: 0 1 55px;
+          flex: 0 1 55px;
+  position: relative;
+  z-index: 2;
+  background: #303F9F;
+  color: #fff;
+  text-transform: uppercase;
+  text-align: left;
+  padding: 10px 10px 10px 50px;
+  box-shadow: 0 4px 2px -2px rgba(0,0,0,0.1);
+}
+.dolphin-chat-title .header-title {
+  background: #303F9F !important;
+  color: #fff !important;
+}
+.dolphin-chat-title span {
+  font-weight: normal;
+  font-size: 10px;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  font-size: 8px;
+  letter-spacing: 1px;
+}
+.login-header-box {
+  width: 92%;
+  line-height: 8px;
+}
+.login-sub-header-box {
+  width: 92%;
+  line-height: 8px;
+}
+.chat-header-box {
+  width: 70%;
+  line-height: 8px;
+}
+.chat-sub-header-box {
+  width: 70%;
+  line-height: 8px;
+}
+.dolphin-queue-title {
+  color: white;
+  font-size: 12px;
+  letter-spacing: 1px;
+  padding: 5px;
+  font-family: sans-serif;
+  background: #303F9F;
+  text-align: center;
+}
+.dolphin-queue-timer {
+  color: white;
+  font-size: 12px;
+  letter-spacing: 1px;
+  padding: 5px;
+  font-family: sans-serif;
+  background: #303F9F;
+  text-align: center;
+}
+.dolphin-chat-title .avatar {
+  position: absolute;
+  z-index: 1;
+  top: 8px;
+  left: 9px;
+  border-radius: 30px;
+  width: 30px;
+  height: 30px;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  border: 2px solid rgba(255, 255, 255, 0.24);
+}
+.dolphin-chat-title .avatar img {
+  width: 100%;
+  height: auto;
+}
+.dolphin-chat-close {
+	float: right;
+}
+.dolphin-chat-notification {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  line-height: 15px !important;
+  padding: 5px;
+  background: rgba(199, 0, 57,0.8);
+  border: 2px solid white;
+  color: #fff;
+  text-align: center;
+  font: 9px Arial, sans-serif;
+  position: fixed;
+  bottom: 60px;
+  right: 72px;
+  z-index: 999999;
+  display: none;
+  font-size: 13px;
+}
+.dolphin-chat-notification .hidden {
+  display: none;
+}
+.dolphin-chat-icon {
+  font-family: arial;
+  width: 60px;
+  height: 60px;
+  line-height: 50px;
+  text-align: center;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99999;
+  border-radius: 5px;
+  cursor: pointer;
+  -webkit-box-shadow: 3px 7px 20px -4px rgba(0, 0, 0, 0.75);
+  box-shadow: 3px 7px 20px -4px rgba(0, 0, 0, 0.75);
+  background-color:  #303F9F;
+  background-size: 44px;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  float: right;
+}
+.dolphin-chat-icon .hidden {
+    display: none;
+}
+.dolphin-chat-body {
+  height: 100%;
+  background: white;
+}
+
+/*--------------------
+Messages
+--------------------*/
+.dolphin-messages {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 auto;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  color: rgba(93, 109, 126, 1);
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  background: white;
+  -webkit-overflow-scrolling: touch!important;
+  margin-bottom: -1px;
+}
+.dolphin-messages .messages-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 101%;
+  width: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding-right: 10px;
+  padding-left: 3px;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility:    hidden;
+  -ms-backface-visibility:     hidden;
+  backface-visibility: hidden;
+}
+.dolphin-messages .messages-content::-webkit-scrollbar {
+  width: 6px;
+}
+.dolphin-messages .messages-content::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+}
+.dolphin-messages .messages-content::-webkit-scrollbar-thumb {
+  background: rgba(234, 236, 238,0.8); 
+  box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+.dolphin-messages .messages-content::-webkit-scrollbar-thumb:window-inactive {
+  background: rgba(234, 236, 238,0.4); 
+}
+.dolphin-messages .message {
+  clear: both;
+  float: left;
+  padding: 6px 10px 7px;
+  border: unset !important;
+  border-radius: 10px 10px 10px 0;
+  background: rgba(247, 249, 249, 0.9);
+  margin: 8px 0;
+  font-size: 15px;
+  line-height: 1.4;
+  margin-left: 35px;
+  position: relative;
+  text-align: left;
+  word-break: break-word;
+  min-width: 40px;
+}
+.dolphin-messages .message .timestamp {
+  position: absolute;
+  bottom: -15px;
+  font-size: 9px;
+  color: rgba(93, 109, 126, 0.9);
+}
+.dolphin-messages .message::before {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  border-top: 6px solid rgba(247, 249, 249, 0.9);
+  left: 0;
+  border-right: 7px solid transparent;
+}
+.dolphin-messages .message .avatar {
+  position: absolute;
+  z-index: 1;
+  bottom: -15px;
+  left: -35px;
+  border-radius: 30px;
+  width: 30px;
+  height: 30px;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  border: 2px solid rgba(255, 255, 255, 0.24);
+}
+.dolphin-messages .message .avatar img {
+  width: 100%;
+  height: auto;
+}
+.dolphin-messages .message.message-personal {
+  float: right;
+  color: #fff;
+  text-align: right;
+  background: rgba(48, 63, 159, 1);
+  border-radius: 10px 10px 0 10px;
+}
+.dolphin-messages .message.message-personal::before {
+  left: auto;
+  right: 0;
+  border-right: none;
+  border-left: 5px solid transparent;
+  border-top: 4px solid rgba(48, 63, 159, 1);
+  bottom: -4px;
+}
+.dolphin-messages .message.message-image-personal {
+  padding: 5px;
+  float: right;
+  color: #fff;
+  text-align: right;
+  background: -webkit-linear-gradient(330deg, #303F9F  , #303F9F);
+  background: linear-gradient(120deg, #303F9F  , #303F9F);
+  border-radius: 10px 10px 0 10px;
+}
+.dolphin-messages .message.message-image-personal::before {
+  left: auto;
+  right: 0;
+  border-right: none;
+  border-left: 5px solid transparent;
+  border-top: 4px solid #303F9F;
+  bottom: -4px;
+}
+.dolphin-messages .message.message-image-agent {
+	padding: 5px;
+}
+.dolphin-messages .message.message-failed {
+  float: right;
+  color: #e7e5e5;
+  text-align: right;
+  background: -webkit-linear-gradient(330deg, #303F9F  , #303F9F);
+  background: linear-gradient(120deg, #303F9F  , #303F9F);
+  border-radius: 10px 10px 0 10px;
+}
+.dolphin-messages .message.message-failed::before {
+  left: auto;
+  right: 0;
+  border-right: none;
+  border-left: 5px solid transparent;
+  border-top: 4px solid #303F9F;
+  top: 0px;
+}
+.dolphin-messages .message.message-failed::after {
+  position: absolute;
+  top: -4px;
+  background-size: 12px 12px;
+  display: inline-block;
+  width: 12px; 
+  height: 12px;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAAlwSFlzAAAN1wAADdcBQiibeAAAAVlpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IlhNUCBDb3JlIDUuNC4wIj4KICAgPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4KICAgICAgPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIKICAgICAgICAgICAgeG1sbnM6dGlmZj0iaHR0cDovL25zLmFkb2JlLmNvbS90aWZmLzEuMC8iPgogICAgICAgICA8dGlmZjpPcmllbnRhdGlvbj4xPC90aWZmOk9yaWVudGF0aW9uPgogICAgICA8L3JkZjpEZXNjcmlwdGlvbj4KICAgPC9yZGY6UkRGPgo8L3g6eG1wbWV0YT4KTMInWQAAApxJREFUOBFVUs9LVFEUPvfe957OiM2YP2A0zRGMqE2BidCulUYiaoquAlvoQLjxH/AfaCO1cFHSylBQgohQaNfCH4EoQYT4Ey0YwxmGnJn35t3b+R7zyj64zJnvfN+555x3BTEWiNQwkY/4bXPzPeN5Y7K6ulNEIq3gTD5/YHK5NbLtuZHj4w1woUeEwTSRdbOp6YXUejwaiVBhb48uoGRE+VS2tdFFPk9aytlvJyfPpolK8AoIEPiNje/jUnZnbZv8/X23fmpK1nd0SOTTm5s6/fy5VsmkE/M8ymj9UZ2ePkLXgUAnEi/jSnVntS6KqirtEjnXe3qsOyMjEgcxOOSgwUXwoLicTyQ6pBDjWd8nY4wNDgmP2w1xKZbQcBGCp+wVY1HJHiFcIURghlGXSqGfNLcdItCwFh6OxyxhTKdnDK/aSD6h7j/T5QJljURJeCVZVmuJW2L8vR2b9V2eugzEwbZDgrWBh72SpBT/7sUkgvBfYKwQIce/IXgX/O2UsPjRHDpSXi0ao9ktTaFAFqt+bW3RUXt7oEcMDjnWgNO2UrLguocWE+u8+rtFITTm44KkWPF7d5dON/jRsSF/cBBwyAVgLT5XUal1adXWzuXRrg44zU+Yipy81tdHXakUdU1MUFNvb8Ahx9DQFthj1dTMycfb22sUj7+O8S44gSs0mgxmhBzgzsrTw+xdwd7YAy9Go1uDg6mvy8utsbOzB9lMxjhE7s+VFflFCExDP1ZXfea0zmTsmFIVubq6T7f7+1O0s0NiYWhIDS8u+h9mZiou5udnRTr9pIIfUYHnzsHNQOOVySQVuW3T0PAmOjo6/nBysghv0FlYBOJ3AwP33aOjp8JxOlU8fgOcf37+nRe47rS0vOpbWvoMLvT8AQoHNRxpl5+cAAAAAElFTkSuQmCC); 
+  content: ""
+}
+.dolphin-messages .message.message-sending {
+  float: right;
+  color: #e7e5e5;
+  text-align: right;
+  background: -webkit-linear-gradient(330deg, #303F9F  , #303F9F);
+  background: linear-gradient(120deg, #303F9F  , #303F9F);
+  border-radius: 10px 10px 0 10px;
+}
+.dolphin-messages .message.message-sending::after {
+  position: absolute;
+  top: -4px;
+  background-size: 12px 12px;
+  display: inline-block;
+  width: 12px; 
+  height: 12px;
+  background-image: url('https://cdn.3dolphins.ai/widget/images/ic_timer.gif'); 
+  content: ""
+}
+.dolphin-messages .message.message-read {
+  float: right;
+  color: #e7e5e5;
+  text-align: right;
+  background: rgba(48, 63, 159, 1);
+  border-radius: 10px 10px 0 10px;
+}
+.dolphin-messages .message.message-read::after {
+  position: absolute;
+  top: -4px;
+  background-size: 12px 12px;
+  display: inline-block;
+  width: 12px; 
+  height: 12px;
+  background-image: url('https://cdn.3dolphins.ai/widget/images/ic_double_check.svg'); 
+  content: ""
+}
+.dolphin-messages .message.message-sent {
+  float: right;
+  color: #e7e5e5;
+  text-align: right;
+  background: rgba(48, 63, 159, 1);
+  border-radius: 10px 10px 0 10px;
+}
+.dolphin-messages .message.message-sent::after {
+  position: absolute;
+  top: -4px;
+  background-size: 12px 12px;
+  display: inline-block;
+  width: 12px; 
+  height: 12px;
+  background-image: url('https://cdn.3dolphins.ai/widget/images/ic_single_check.svg'); 
+  content: ""
+}
+.dolphin-messages .message:last-child {
+  margin-bottom: 30px;
+}
+.dolphin-messages .message.new {
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  -webkit-animation: bounce 0ms linear both;
+          animation: bounce 0ms linear both;
+}
+.dolphin-messages .message.loading::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  content: '';
+  display: block;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: rgba(133, 146, 158, 0.9);
+  z-index: 2;
+  margin-top: 4px;
+  -webkit-animation: ball 0.45s cubic-bezier(0, 0, 0.15, 1) alternate infinite;
+          animation: ball 0.45s cubic-bezier(0, 0, 0.15, 1) alternate infinite;
+  border: none;
+  -webkit-animation-delay: .15s;
+          animation-delay: .15s;
+}
+.dolphin-messages .message.loading span {
+  display: block;
+  font-size: 0;
+  width: 20px;
+  height: 10px;
+  position: relative;
+}
+.dolphin-messages .message.loading span::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  content: '';
+  display: block;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: rgba(133, 146, 158, 0.9);
+  z-index: 2;
+  margin-top: 4px;
+  -webkit-animation: ball 0.45s cubic-bezier(0, 0, 0.15, 1) alternate infinite;
+          animation: ball 0.45s cubic-bezier(0, 0, 0.15, 1) alternate infinite;
+  margin-left: -7px;
+}
+.dolphin-messages .message.loading span::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  content: '';
+  display: block;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: rgba(133, 146, 158, 0.9);
+  z-index: 2;
+  margin-top: 4px;
+  -webkit-animation: ball 0.45s cubic-bezier(0, 0, 0.15, 1) alternate infinite;
+          animation: ball 0.45s cubic-bezier(0, 0, 0.15, 1) alternate infinite;
+  margin-left: 7px;
+  -webkit-animation-delay: .3s;
+          animation-delay: .3s;
+}
+
+/*--------------------
+Message Box
+--------------------*/
+.dolphin-message-box-container {
+  background: white;
+  height: 80px;
+  margin-top: -1px;
+  margin-bottom: -1px;
+}
+@media (max-width: 700px) {
+	.dolphin-message-box .message-input {
+    width: 80% !important;
+  }
+}
+.dolphin-message-box {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 1 40px;
+      -ms-flex: 0 1 40px;
+          flex: 0 1 40px;
+  background: rgba(255, 255, 255, 1);
+  padding: 10px;
+  position: relative;
+  border: 1px solid white;
+  border-radius: 10px;
+  margin: 10px;
+  box-shadow: 0 0 20px 0 rgba(150,165,190,.3);
+  padding-bottom: 5px;
+  top: 10px;
+  height: 50px;
+}
+.dolphin-message-box .message-input {
+  background: none;
+  border: none;
+  outline: none !important;
+  resize: none;
+  color: rgba(93, 109, 126, 1);
+  font-size: 14px;
+  font-family: "Helvetica Neue", "Apple Color Emoji", Helvetica, Arial, sans-serif;
+  height: 34px;
+  margin: 0;
+  padding-right: 10px;
+  width: 65%;
+  float: left;
+  box-shadow: unset !important;
+  min-height: unset !important;
+}
+.message-input-75-percent {
+width: 75% !important;
+}
+.message-input-85-percent {
+  width: 85% !important;
+}
+.dolphin-message-box textarea:focus:-webkit-placeholder {
+  color: rgba(93, 109, 126, 0.9);
+}
+.dolphin-message-box .message-submit {
+  position: absolute;
+  z-index: 1;
+  top: 9px;
+  right: 10px;
+  color: #fff;
+  border: none;
+  background: #303F9F;
+  font-size: 10px;
+  text-transform: uppercase;
+  line-height: 1;
+  padding: 10px 10px;
+  border-radius: 10px;
+  outline: none !important;
+  -webkit-transition: background .2s ease;
+  transition: background .2s ease;
+  cursor: pointer;
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjAiIHk9IjAiIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCwgMCwgMzIsIDMyIj4KICA8ZyBpZD0iTGF5ZXJfMSI+CiAgICA8Zz4KICAgICAgPHBhdGggZD0iTTIuNDgyLDE2LjE4IEMxLjM5OCwxNi43NDggMS40NDMsMTcuNTggMi41OCwxOC4wMzIgTDUuOTQ0LDE5LjM2MyBDNy4wODEsMTkuODEyIDguOCwxOS41NjcgOS43NjUsMTguODEzIEwyNC4zNzcsNy4yOSBDMjUuMzM4LDYuNTMzIDI1LjQ0MSw2LjY0NSAyNC42MDYsNy41MzkgTDEzLjA1NCwxOS45MDMgQzEyLjIxNywyMC43OTUgMTIuNDY0LDIxLjg4NyAxMy42MDQsMjIuMzI4IEwxMy45OTgsMjIuNDgyIEMxNS4xMzgsMjIuOTIyIDE2Ljk5OCwyMy42NjQgMTguMTMsMjQuMTI0IEwyMS44NjIsMjUuNjQ1IEMyMi45OTUsMjYuMTA1IDIzLjkyMiwyNi40ODcgMjMuOTI0LDI2LjQ5NCBDMjMuOTI1LDI2LjUwMSAyMy45MywyNi41MjIgMjMuOTM2LDI2LjUyNCBDMjMuOTQyLDI2LjUyNiAyNC4yMDksMjUuNTYyIDI0LjUzLDI0LjM4MyBMMzAuMjE4LDMuNDc1IEMzMC41MzksMi4yOTUgMjkuOTE2LDEuNzk0IDI4LjgzMywyLjM2MiBMMi40ODIsMTYuMTggeiIgZmlsbD0iI0FFQjZCRiIvPgogICAgICA8cGF0aCBkPSJNMTEuNzE3LDI5Ljg2NSBDMTEuNjUsMzAuMDY0IDE0LjAxOCwyNi40MzYgMTQuMDE4LDI2LjQzNiBDMTQuNjg3LDI1LjQxNCAxNC4zMDgsMjQuMTk1IDEzLjE3NiwyMy43MzMgTDEwLjU5NCwyMi42NzUgQzkuNDYyLDIyLjIxMiA4LjkyLDIyLjc1NSA5LjM4OSwyMy44ODcgQzkuMzg5LDIzLjg4OCAxMS43ODUsMjkuNjYxIDExLjcxNywyOS44NjUgeiIgZmlsbD0iI0FFQjZCRiIvPgogICAgPC9nPgogIDwvZz4KPC9zdmc+Cg==) no-repeat;
+  background-size: 20px 20px;
+  width: 40px;
+  height: 30px;
+  background-position: center;
+  box-shadow: 0 0 10px 0 rgba(150,165,190,.3);
+}
+.dolphin-message-box .message-submit:hover {
+  background-color: #F7F9F9;
+}
+.dolphin-message-box #cancel.message-submit {
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjAiIHk9IjAiIHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIiB2aWV3Qm94PSIwLCAwLCA1MTIsIDUxMiI+CiAgPGcgaWQ9IkxheWVyXzEiPgogICAgPHBhdGggZD0iTTUxMS41NjMsNDM0LjI1OSBDNTA5LjgzNSwyOTEuOTMgMzg3LjE0MywxNzYuMDE3IDIzNC40NzYsMTcwLjg0IEwyMzQuNDc2LDk1Ljk5OSBDMjM0LjQ3Niw3OC4zNTQgMjIwLjEzNCw2NCAyMDIuNTAyLDY0IEMxOTQuNTcxLDY0IDE4Ni45MTEsNjcuMDQyIDE4MC45NzgsNzIuNTYyIEMxODAuOTc4LDcyLjU2MiA0Ni4xNSwxOTcuMzkxIDcuMzY5LDIzNi4zMTcgQzIuNjIzLDI0MS4xMDkgMCwyNDguMDg4IDAsMjU1Ljk5NCBDMCwyNjMuOSAyLjYyMywyNzAuODc5IDcuMzY5LDI3NS42ODEgQzQ2LjE1LDMxNC41OTYgMTgwLjk3OCw0MzkuNDI2IDE4MC45NzgsNDM5LjQyNiBDMTg2LjkxMSw0NDQuOTQ3IDE5NC41NzEsNDQ3Ljk4OCAyMDIuNTAyLDQ0Ny45ODggQzIyMC4xMzMsNDQ3Ljk4OCAyMzQuNDc2LDQzMy42MzQgMjM0LjQ3Niw0MTUuOTg5IEwyMzQuNDc2LDM0MS4zOTggQzM4Ny45NTUsMzQzLjU1NCA0OTAuMjY4LDM5Mi4wMDEgNDkwLjI2OCw0MzcuMzIyIEM0OTAuMjY4LDQ0My4yMTggNDk1LjAzNSw0NDcuOTg4IDUwMC45MjYsNDQ3Ljk4OCBDNTAxLjA5Myw0NDguMDA5IDUwMS4yNTksNDQ3Ljk5OCA1MDEuMzQyLDQ0Ny45ODggQzUwNy4yMzMsNDQ3Ljk4OCA1MTIsNDQzLjIxNyA1MTIsNDM3LjMyMiBDNTEyLDQzNi4yNTkgNTExLjg1NCw0MzUuMjI4IDUxMS41NjMsNDM0LjI1OSB6IiBmaWxsPSIjODU5MjlFIi8+CiAgPC9nPgo8L3N2Zz4K) no-repeat;
+  background-position: center;
+  background-size: 20px 20px;
+}
+.dolphin-message-close {
+  position: absolute;
+  z-index: 1;
+  top: 12px;
+  right: 45px;
+  border: 1px;
+  background-color: transparent;
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 1;
+  padding: 6px 10px;
+  border-radius: 50%;
+  outline: none !important;
+  -webkit-transition: background .2s ease;
+  transition: background .2s ease;
+  cursor: pointer;
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjAiIHk9IjAiIHdpZHRoPSIzMiIgaGVpZ2h0PSIzMiIgdmlld0JveD0iMCwgMCwgMzIsIDMyIj4KICA8ZyBpZD0iTGF5ZXJfMSI+CiAgICA8cGF0aCBkPSJNMTQuNzcsMjMuNzk1IEw1LjE4NSwxNC4yMSBDNC4zMDYsMTMuMzMxIDQuMzA2LDExLjg5MyA1LjE4NSwxMS4wMTUgTDUuOTg1LDEwLjIxNCBDNi44NjIsOS4zMzYgOC4zMDEsOS4zMzYgOS4xNzksMTAuMjE0IEwxNi40OTQsMTcuNTI5IEwyMy44MSwxMC4yMTQgQzI0LjY4OCw5LjMzNiAyNi4xMjcsOS4zMzYgMjcuMDA0LDEwLjIxNCBMMjcuODA0LDExLjAxNSBDMjguNjgzLDExLjg5MyAyOC42ODMsMTMuMzMxIDI3LjgwNCwxNC4yMSBMMTguMjE3LDIzLjc5NSBDMTcuNzQ2LDI0LjI2NyAxNy4xMTMsMjQuNDc3IDE2LjQ5NCwyNC40NDIgQzE1Ljg3NSwyNC40NzcgMTUuMjQzLDI0LjI2NyAxNC43NywyMy43OTUgeiIgZmlsbD0iI0ZGRkZGRiIvPgogIDwvZz4KPC9zdmc+Cg==);
+  background-position: center;
+  width: 20px;
+  height: 20px;
+  background-repeat: no-repeat;
+  background-size: 20px 20px;
+}
+.dolphin-message-close:hover {
+  filter: invert(30%);
+  -webkit-filter: invert(30%);
+}
+.dolphin-message-logout {
+  position: absolute;
+  z-index: 1;
+  top: 12px;
+  right: 10px;
+  border: 1px;
+  background-color: white;
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 1;
+  padding: 6px 10px;
+  border-radius: 3px;
+  outline: none !important;
+  -webkit-transition: background .2s ease;
+  transition: background .2s ease;
+  cursor: pointer;
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAwIiBoZWlnaHQ9IjEwMDAiIHZpZXdCb3g9IjAsIDAsIDEwMDAsIDEwMDAiPgogIDxnIGlkPSJMYXllcl8xIj4KICAgIDxwYXRoIGQ9Ik0xODMuMzY0LDUyNy44NjggQzE4My4zNjQsNDMxLjQgMjMyLjE1NSwzNDcuNDQgMzA1LjM3NSwyOTIuNzQ1IEMzMjIuNjQ3LDI3OS44NDYgMzU3LjI1OSwyNzQuMTA3IDM3MS4xNzEsMjkwLjU5NSBDMzc5Ljc5MiwzMDAuNzk4IDM4Mi44NzMsMzEzLjA3IDM4My4yMjQsMzI0LjcxOCBDMzgzLjg5NiwzNDYuMjc0IDM2MS41NTgsMzcyLjUxOSAzNDYuMTg2LDM4Ny42MzEgQzMwOS40NTcsNDIzLjc3MSAyODYuMzE0LDQ3Mi43NjggMjg2LjMxNCw1MjguMTU2IEMyODYuMzE0LDY0NC4wMzcgMzgwLjI0Nyw3MzEuODgyIDQ5Ni4xMTksNzMxLjg4MiBDNjEyLjA0MSw3MzEuODgyIDcwNS45OTYsNjQ0LjAzNyA3MDUuOTk2LDUyOC4xNTYgQzcwNS45OTYsNDY5LjEwMSA2ODMuNDM5LDQxNy4yNDkgNjQ1Ljk4OCwzODAuNTcgQzYzMC41OTcsMzY1LjQ3NyA2MDkuNjkzLDMzOC44MDggNjEzLjA1NSwzMTcuNDk0IEM2MTQuOTg2LDMwNS4xOTIgNjIwLjMxMSwyOTMuMDE2IDYzMS45MzEsMjg0LjIzOCBDNjQ5LjEzOSwyNzEuMjQ1IDY4My42MDYsMjgwLjUyNyA3MDAuNjI5LDI5My43NyBDNzcwLjg5MywzNDguNDU0IDgxNi42MjUsNDMyLjAyMSA4MTYuNjI1LDUyNy44NjggQzgxNi42MjUsNjk3LjY4OCA2NjYuMDMyLDgyOS4yNDcgNDk2LjE1OSw4MjkuMjQ3IEMzMjYuMzU5LDgyOS4yNTggMTgzLjM2NCw2OTcuNjc3IDE4My4zNjQsNTI3Ljg2OCIgZmlsbD0iI0UxMDAwMCIvPgogICAgPHBhdGggZD0iTTUwMi4yNzksNTU5LjY0MyBDNDgxLjA4OSw1NTkuNjQzIDQ1MS42NDksNTM0LjgwMyA0NTEuNjQ5LDUxMy42MzMgTDQ1MS42NDksMjE4LjMzOSBDNDUxLjY0OSwyMTUuMzczIDQ1Mi4xNDMsMTcwLjc0NSA1MDAuNzY5LDE3MC43NDUgQzUyMS45NjEsMTcwLjc0NSA1NDkuODYzLDE4MS44NzcgNTQ5Ljg2MywyMTguMzM5IEw1NDkuODYzLDUxMy42MzMgQzU0OS44NzIsNTM0LjgwMyA1MjMuNTY0LDU1OS42NDMgNTAyLjI3OSw1NTkuNjQzIiBmaWxsPSIjRTEwMDAwIi8+CiAgPC9nPgo8L3N2Zz4K);
+  background-position: center;
+  width: 20px;
+  height: 20px;
+  background-repeat: no-repeat;
+  background-size: 22px 25px;
+  box-shadow: 0 0 10px 0 rgba(150,165,190,.3);
+  border-radius: 50%;
+}
+.dolphin-message-logout:hover {
+  filter: invert(30%);
+  -webkit-filter: invert(30%);
+}
+.dolphin-message-retry {
+  z-index: 1;
+  border: 1px;
+  background-color: white;
+  font-size: 10px;
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 1;
+  padding: 6px 10px;
+  border-radius: 3px;
+  outline: none !important;
+  -webkit-transition: background .2s ease;
+  transition: background .2s ease;
+  cursor: pointer;
+  background-position: center;
+  width: 20px;
+  height: 20px;
+  background-repeat: no-repeat;
+  background-size: 15px 15px;
+  color: #34495E;
+  width: 100px;
+}
+.dolphin-message-retry:hover {
+  background-color:#ECF0F1;
+}
+
+/*--------------------
+Bounce
+--------------------*/
+@-webkit-keyframes bounce {
+  0% {
+    -webkit-transform: matrix3d(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+            transform: matrix3d(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  4.7% {
+    -webkit-transform: matrix3d(0.45, 0, 0, 0, 0, 0.45, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+            transform: matrix3d(0.45, 0, 0, 0, 0, 0.45, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  9.41% {
+    -webkit-transform: matrix3d(0.883, 0, 0, 0, 0, 0.883, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+            transform: matrix3d(0.883, 0, 0, 0, 0, 0.883, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  14.11% {
+    -webkit-transform: matrix3d(1.141, 0, 0, 0, 0, 1.141, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+            transform: matrix3d(1.141, 0, 0, 0, 0, 1.141, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  18.72% {
+    -webkit-transform: matrix3d(1.212, 0, 0, 0, 0, 1.212, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+            transform: matrix3d(1.212, 0, 0, 0, 0, 1.212, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  24.32% {
+    -webkit-transform: matrix3d(1.151, 0, 0, 0, 0, 1.151, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+            transform: matrix3d(1.151, 0, 0, 0, 0, 1.151, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  29.93% {
+    -webkit-transform: matrix3d(1.048, 0, 0, 0, 0, 1.048, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+            transform: matrix3d(1.048, 0, 0, 0, 0, 1.048, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  35.54% {
+    -webkit-transform: matrix3d(0.979, 0, 0, 0, 0, 0.979, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+            transform: matrix3d(0.979, 0, 0, 0, 0, 0.979, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  41.04% {
+    -webkit-transform: matrix3d(0.961, 0, 0, 0, 0, 0.961, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+            transform: matrix3d(0.961, 0, 0, 0, 0, 0.961, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  52.15% {
+    -webkit-transform: matrix3d(0.991, 0, 0, 0, 0, 0.991, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+            transform: matrix3d(0.991, 0, 0, 0, 0, 0.991, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  63.26% {
+    -webkit-transform: matrix3d(1.007, 0, 0, 0, 0, 1.007, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+            transform: matrix3d(1.007, 0, 0, 0, 0, 1.007, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  85.49% {
+    -webkit-transform: matrix3d(0.999, 0, 0, 0, 0, 0.999, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+            transform: matrix3d(0.999, 0, 0, 0, 0, 0.999, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  100% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+            transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+}
+@keyframes bounce {
+  0% {
+    -webkit-transform: matrix3d(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+            transform: matrix3d(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  4.7% {
+    -webkit-transform: matrix3d(0.45, 0, 0, 0, 0, 0.45, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+            transform: matrix3d(0.45, 0, 0, 0, 0, 0.45, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  9.41% {
+    -webkit-transform: matrix3d(0.883, 0, 0, 0, 0, 0.883, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+            transform: matrix3d(0.883, 0, 0, 0, 0, 0.883, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  14.11% {
+    -webkit-transform: matrix3d(1.141, 0, 0, 0, 0, 1.141, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+            transform: matrix3d(1.141, 0, 0, 0, 0, 1.141, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  18.72% {
+    -webkit-transform: matrix3d(1.212, 0, 0, 0, 0, 1.212, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+            transform: matrix3d(1.212, 0, 0, 0, 0, 1.212, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  24.32% {
+    -webkit-transform: matrix3d(1.151, 0, 0, 0, 0, 1.151, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+            transform: matrix3d(1.151, 0, 0, 0, 0, 1.151, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  29.93% {
+    -webkit-transform: matrix3d(1.048, 0, 0, 0, 0, 1.048, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+            transform: matrix3d(1.048, 0, 0, 0, 0, 1.048, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  35.54% {
+    -webkit-transform: matrix3d(0.979, 0, 0, 0, 0, 0.979, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+            transform: matrix3d(0.979, 0, 0, 0, 0, 0.979, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  41.04% {
+    -webkit-transform: matrix3d(0.961, 0, 0, 0, 0, 0.961, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+            transform: matrix3d(0.961, 0, 0, 0, 0, 0.961, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  52.15% {
+    -webkit-transform: matrix3d(0.991, 0, 0, 0, 0, 0.991, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+            transform: matrix3d(0.991, 0, 0, 0, 0, 0.991, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  63.26% {
+    -webkit-transform: matrix3d(1.007, 0, 0, 0, 0, 1.007, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+            transform: matrix3d(1.007, 0, 0, 0, 0, 1.007, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  85.49% {
+    -webkit-transform: matrix3d(0.999, 0, 0, 0, 0, 0.999, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+            transform: matrix3d(0.999, 0, 0, 0, 0, 0.999, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+  100% {
+    -webkit-transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+            transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  }
+}
+@-webkit-keyframes ball {
+  from {
+    -webkit-transform: translateY(0) scaleY(0.8);
+            transform: translateY(0) scaleY(0.8);
+  }
+  to {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+}
+@keyframes ball {
+  from {
+    -webkit-transform: translateY(0) scaleY(0.8);
+            transform: translateY(0) scaleY(0.8);
+  }
+  to {
+    -webkit-transform: translateY(-10px);
+            transform: translateY(-10px);
+  }
+}
+
+/*--------------------
+Attachment
+--------------------*/
+.dolphin-inputfile {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+}
+.dolphin-inputfile + label {
+	position: absolute;
+	z-index: 1;
+	top: 11px;
+	right: 90px;
+  font-size: 11px;
+  font-weight: 600;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor: pointer;
+  display: inline-block;
+  overflow: hidden;
+  padding: 0.40rem 0.40rem 0.40rem 0.6rem;
+  text-align: center;
+  border-radius: 10px;
+}
+.dolphin-attachment-position + label {
+  right: 56px !important;
+}
+.no-js .inputfile + label {
+  display: none;
+}
+.dolphin-inputfile:focus + label,
+.dolphin-inputfile.has-focus + label {
+  outline: 0 !important;
+}
+.dolphin-inputfile + label svg {
+  width: 1.3em;
+  height: 1.2em;
+  vertical-align: middle;
+  fill: currentColor;
+  margin-top: -0.25em;
+  margin-right: 0.25em;
+}
+.dolphin-inputfile-1 + label {
+  color: #f1e5e6;
+  background-color: transparent;
+}
+.dolphin-inputfile-1:focus + label,
+.dolphin-inputfile-1.has-focus + label,
+.dolphin-inputfile-1 + label:hover {
+  background-color: rgba(255,255,255, 0.1);
+}
+.dolphin-attachment-figure {
+	margin: 0;
+  float: left;
+  color:#AEB6BF;
+}
+.dolphin-icons8-Document { /* Customizes Document icon */
+  float: left;
+  width: 20px;
+  height: 20px;
+  margin-right:10px;
+  margin-top:7px;
+}
+.dolphin-icon { /* Customizes all icons at once */
+  display: inline-block;
+}
+.dolphin-attachment-image {
+	border-radius: 10px;
+	max-width: 220px;
+}
+.dolphin-attachment-filename-sent {
+	float: right;
+	display: table;
+	height: 100%;
+	text-align: center;
+	margin-top: 1px;
+	cursor: pointer;
+}
+.dolphin-attachment-filename-text {
+  background: rgba(247, 249, 249, 0.9);
+  border-radius: 3px;
+  padding: 1px;
+  font-weight: bold;
+}
+
+.button-agent-feedback {
+  z-index: 1;
+  color: #fff;
+  border: none;
+  background: rgba(48, 63, 159, 1);
+  font-size: 12px;
+  line-height: 1;
+  padding: 10px 10px;
+  border-radius: 10px;
+  outline: none !important;
+  -webkit-transition: background .2s ease;
+  transition: background .2s ease;
+  cursor: pointer;
+}
+.button-agent-feedback:hover {
+  background: rgba(48, 63, 159, 1);
+}
+
+/*--------------------
+Quick Replies
+--------------------*/
+.dolphin-messages .quick-reply {
+  clear: both;
+  float: left;
+  border-radius: 10px 10px 10px 0;
+  background: none;
+  margin-top: 25px;
+  font-size: 11px;
+  line-height: 1.4;
+  position: relative;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  text-align: left;
+  width: 100%;
+  display: flex;
+  margin-bottom: 5px;
+}
+.dolphin-messages .quick-reply .avatar {
+  z-index: 1;
+  bottom: -15px;
+  left: -35px;
+  border-radius: 30px;
+  width: 25px;
+  height: 25px;
+  overflow: hidden;
+  margin: 0 3px 0 0;
+  padding: 0;
+  border: 2px solid rgba(255, 255, 255, 0.24);
+}
+.dolphin-messages .quick-reply .avatar img {
+  width: 100%;
+  height: auto;
+}
+.dolphin-message-q-replies {
+	display: flex;
+	overflow-x: auto;
+	padding-bottom: 16px;
+	margin-bottom: -16px;
+	height: 40px;
+}
+.dolphin-message-q-replies::-webkit-scrollbar {
+  display: none;
+}
+.dolphin-q-replies {
+	margin-right: 10px;
+	display: flex;
+  flex-wrap: nowrap;
+  flex: 0 0 auto;
+}
+.dolphin-q-replies-flat {
+  margin-right: 3px;
+  display: inline-block;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+.dolphin-q-reply-text {
+	background: #303F9F;
+	border-radius: 15px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 7px;
+	padding-right: 7px;
+	flex: 0 0 auto;
+	cursor: pointer;
+  color:white;
+  min-height: 25px;
+}
+.dolphin-q-reply-text:hover {
+  background: white;
+  color: #303F9F;
+}
+.dolphin-q-reply-left {
+	display: flex;
+	align-self: center;
+	padding: 5px 10px 5px 0px;
+	cursor: pointer;
+	height: 30px;
+  margin-bottom: 12px;
+}
+.dolphin-q-reply-right {
+	display: flex;
+	align-self: center;
+	padding: 5px 0px 5px 10px;
+	cursor: pointer;
+	height: 30px;
+  margin-bottom: 12px;
+}
+
+/*---------------------------------
+Campaign Widget
+----------------------------------*/
+@media (max-width: 700px) {
+  .dolphin-campaign-widget {
+    width: 100%;
+    right: 0px;
+  }
+}
+@media (min-width: 700px) {
+  .dolphin-campaign-widget {
+    right: 30px;
+  }
+}
+.dolphin-campaign-widget {
+  background: #303F9F;
+  position: fixed;
+  bottom: 82.5px;
+  float: right;
+  border-radius: 5px;
+  box-shadow: 0 4px 23px 0 rgba(0,0,0,.09);
+  z-index: 9;
+  width: 330px;
+  display: none;
+}
+.dolphin-campaign-header {
+  padding: 10px;
+  background: #303F9F;
+  border-radius: 5px 5px 5px 5px;
+  color: black;
+  height: 65px;
+  box-shadow: 0 4px 23px 0 rgba(0,0,0,.09);
+}
+.dolphin-campaign-close {
+  width: 12px;
+  height: 12px;
+  float: right;
+  cursor: pointer;
+}
+.dolphin-campaign-title {
+  position: absolute;
+  font-size: 14px;
+  font-family: "Helvetica Neue", "Apple Color Emoji", Helvetica, Arial, sans-serif;
+  font-size: 100%;
+  font-style: normal;
+  letter-spacing: normal;
+  font-stretch: normal;
+  font-weight: normal;
+  text-align-last: initial;
+  text-indent: 0px;
+  text-shadow: none;
+  text-transform: none;
+  box-sizing: content-box;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1;
+  font-variant: normal;
+  text-decoration: none;
+  color: white;
+  width: calc(100% - 20px);
+}
+.dolphin-campaign-text {
+  top: 15px;
+  position: relative;
+  font-size: 12px;
+  font-family: "Helvetica Neue", "Apple Color Emoji", Helvetica, Arial, sans-serif;
+  font-size: 100%;
+  font-style: normal;
+  letter-spacing: normal;
+  font-stretch: normal;
+  font-weight: normal;
+  text-align-last: initial;
+  text-indent: 0px;
+  text-shadow: none;
+  text-transform: none;
+  box-sizing: content-box;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1;
+  font-variant: normal;
+  text-decoration: none;
+  color: white;
+}
+.dolphin-campaign-menu-container {
+  display: flex;
+  visibility: hidden;
+  height: 0;
+}
+.dolphin-campaign-menu {
+  padding: 13px;
+  cursor: pointer;
+}
+.dolphin-campaign-menu-item {
+  box-shadow: 0 4px 2px -2px rgba(0,0,0,0.1);
+  padding: 5px;
+  border-radius: 10px;
+  background-repeat: no-repeat;
+  background-size: 70px 60px;
+  height: 60px;
+  width: 70px;
+}
+.dolphin-campaign-menu-item:hover {
+  border-bottom: solid #58D68D;
+}
+.dolphin-campaign-menu-label {
+  font-size: 12px;
+  text-align: center;
+  height: 0px;
+  font-family: "Helvetica Neue", "Apple Color Emoji", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  letter-spacing: normal;
+  font-stretch: normal;
+  font-weight: normal;
+  text-align-last: initial;
+  text-indent: 0px;
+  text-shadow: none;
+  text-transform: none;
+  box-sizing: content-box;
+  -webkit-font-smoothing: antialiased;
+  line-height: 2;
+  font-variant: normal;
+  text-decoration: none;
+  color: #5D6D7E;
+}
+
+.pac-container {
+	z-index: 99999999 !important;
+}
+
+/*---------------------------------
+Upload progress bar
+----------------------------------*/
+.dolphin-upload-progress {
+  width: 100%;
+  background: white;
+  border: none;
+}
+
+.dolphin-upload-progress .progress-indicator {
+  width: 10%;
+  height: 10px;
+  background-color: #303F9F;
+  text-align: center; /* To center it horizontally (if you want) */
+  line-height: 10px; /* To center it vertically */
+  color: white;
+}
+
+.dolphin-upload-progress .upload-progress-text {
+  color: white;
+  font-size: 10px;
+  width: 100%;
+  position: absolute;
+}
+.dolphin-box-message-send-email {
+	border: 2px solid #e5e5e5 !important;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: white;
+    margin: auto;
+    box-sizing: border-box;
+    width: 90%;
+}
+.dolphin-message-send-email {
+	color: rgba(93, 109, 126, 1);
+    font-size: 12px;
+    width: 80%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    display: inline-block;
+}
+.dolphin-box-message-send-email {
+	border: 2px solid #e5e5e5 !important;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: white;
+    margin: auto;
+    box-sizing: border-box;
+    width: 90%;
+}
+.dolphin-message-send-email {
+	color: rgba(93, 109, 126, 1);
+    font-size: 12px;
+    width: 80%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    display: inline-block;
+}
+.iti {
+	width: 70% !important;
+}
+
+@keyframes dolphin-blinking-text-waiting{
+	0%{     color: #fff;
+			background-color: #303F9F;
+			width: auto;
+			height: auto;
+			padding: 2px 5px;
+			border-radius: 4px;
+			box-shadow: 0px 0px 8px -3px rgba(0, 0, 0, 0.75); }
+
+	49%{    color: #fff;
+			background-color: #303F9F;
+			width: auto;
+			height: auto;
+			padding: 2px 5px;
+			border-radius: 4px;
+			box-shadow: 0px 0px 8px -3px rgba(0, 0, 0, 0.75); }
+
+	60%{    color: transparent;
+			background-color: transparent;
+			width: none;
+			height: none;
+			padding: none;
+			border-radius: none;
+			box-shadow:none; }
+
+	99%{    color: transparent;
+			background-color: transparent;
+			width: none;
+			height: none;
+			padding: none;
+			border-radius: none;
+			box-shadow: none; }
+	
+	100%{   color: #fff;
+			background-color: #303F9F;
+			width: auto;
+			height: auto;
+			padding: 2px 5px;
+			border-radius: 4px;
+			box-shadow: 0px 0px 8px -3px rgba(0, 0, 0, 0.75); }
+}

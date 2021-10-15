@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Virtus Technology Indonesia</title>
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1,user-scalable=no" />
+	<style type="text/css">
+		html {
+			background: url(images/bgvti.png) no-repeat;
+			height: 100%;
+			background-size: cover;
+		}
+	</style>
+	<script src='js/jquery-2.1.3.min.js'></script>
+	<script>
+		$(document).ready(function () {
+			$.getScript( "js/jquery.stylesheet.js").done(function() {
+				var css = [ "css/vita.css", "css/widget.css", "css/lightslider.css", "css/intlTelInput.css"]
+				$.getCss(css, function() {
+					$.when(
+						$.getScript( "js/iframeResizer.contentWindow.js" ),
+						$.getScript( "js/iframeResizer.js" ),
+						$.getScript( "js/lightslider.js" ),
+						$.getScript( "js/lazyload.min.js" ),
+						$.getScript( "js/cryptojs/pbkdf2.js" ),
+						$.getScript( "js/cryptojs/aes.js" ),
+						$.getScript( "js/cipher/aes-util.js" ),
+						$.getScript( "js/stp.js" ),
+						$.getScript( "js/sjs.js" ),
+						$.getScript( "js/fuse.js" ),
+						$.getScript( "js/speech.js" ),
+						$.getScript( "js/intlTelInput.js" ),
+                        $.getScript( "js/utils.js" ),
+						$.getScript( "js/chat.js" ),
+						$.getScript( "js/intlTelInput.js" ),
+						$.Deferred(function( deferred ){
+							$( deferred.resolve );
+						})
+					).done(function(){
+						Chat.init({
+							header: 'VITA',
+							login_sub_header: 'Silahkan kak diisi dulu datanya',
+							connect_message: '<b>Silahkan masukkan identitas kakak<br>untuk meningkatkan kualitas layanan Vita</b> 😊',
+							chat_sub_header: 'Lagi aku hubungin. Sebentar ya kak.',
+							url: 'https://virtus.3dolphins.ai:30005',
+							client_id: '330f49df8243756a8a4dc7f7f7ee6dfe',
+							client_secret: 'cb1a08d3c183f43502cb501701cf5b93',
+							enable_service_hour: false,
+							off_hour_message: "CS lagi tidur. Zzzzz...",
+							header: "Vita",
+							login_sub_header: "Virtus Technology Indonesia",
+							name_placeholder: "Nama kamu",
+							email_placeholder: "Email kamu",
+							phone_placeholder: "Nomor telp kamu",
+							chat_sub_header: "Virtus Technology Indonesia",
+							type_placeholder: "Masukkan pertanyaan.....",
+							triggerMenu: "Menu",
+							welcome_message: "Halo kak 😊. Perkenalkan namaku Vita 👩",
+							avatar: 'images/VITA9.jpeg',
+							icon_avatar: 'images/VITA9.png',
+							agent_avatar: 'images/VITA9.jpeg',
+							enable_queue: false,
+							queue_text: "⏰NOMOR URUT: ",
+							enable_campaign: true,
+							campaign_timer: 2000,
+							campaign_title: "",
+							campaign_text: "Halo kak 👋, ada yang bisa Vita bantu ?",
+							campaign_menu: [
+								{"value":"solution", "icon":"images/menu/square/Solutions.png"},
+								{"value":"produk", "icon":"images/menu/square/Products.png"},
+								{"value":"event", "icon":"images/menu/square/Events.png"},
+								{"value":"career", "icon":"images/menu/square/Careers.png"},
+							],
+							enable_voice: false,
+							enable_speech: false,
+							gender: "female",
+							guestName: "",
+							enable_attachment: false,
+							enable_history: false,
+							number_of_messages: 50,
+							quick_reply_flat: false,
+							max_upload_message: "File size limit exceeded. Maximum filesize is [max_filesize]",
+							uploading_text: "Uploading",
+							errorLocationMessage: "",
+							enable_attachment: false,
+							upload_error_message: "Sorry, media is not supported",
+							member_id_input_error_message: "Silahkan Input Salah Satu",
+							name_input_error_message: "Input nama tidak valid",
+							email_input_error_message: "Input email tidak valid",
+							phone_input_error_message: "Input nomor tidak valid",
+							member_mode_select_error_message: "Pilih salah satu",
+							connect_button_text: "Connect"
+						});
+					});
+				});
+			});
+		});
+	</script>
+</head>
+<body>  
+</body>
+</html>
